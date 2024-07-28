@@ -2,7 +2,11 @@
 
 This is a demo application for managing a company's operations using a web-based interface. The application is built using Go for the backend and HTML, CSS, and JavaScript for the frontend. It supports functionalities for user management, customer management, billing, payroll, and role-based access control with different permissions.
 
-[![YouTube Video](https://img.youtube.com/vi/Vrau6EMr8eo/0.jpg)](https://www.youtube.com/watch?v=Vrau6EMr8eo)
+[![YouTube Video](https://img.youtube.com/vi/Vrau6EMr8eo/0.jpg)](https://www.youtube.c
+
+https://github.com/user-attachments/assets/740361c4-3639-4d9c-9a38-18106eae4a0b
+
+om/watch?v=Vrau6EMr8eo)
 
 ## Features
 

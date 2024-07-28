@@ -47,7 +47,4 @@ https://github.com/user-attachments/assets/740361c4-3639-4d9c-9a38-18106eae4a0b
 ## Lines of Code
 - Backend Golang Application with Migrations
   ![lines](https://github.com/user-attachments/assets/d5ea60a6-1edf-42ed-b3cd-d82aa4cd9880)
-- 
----
 
-This description should give a clear and concise overview of your application.

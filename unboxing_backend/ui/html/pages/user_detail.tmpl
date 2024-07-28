@@ -1,0 +1,8 @@
+{{ define "content" }}
+<h2>User Details</h2>
+<p><strong>Name:</strong> {{ .User.Name }}</p>
+<p><strong>Email:</strong> {{ .User.Email }}</p>
+<p><strong>Role:</strong> {{ .User.Role }}</p>
+<a href="/v1/user/{{ .User.ID }}/edit" class="btn">Edit</a>
+<a href="//user" class="btn">Back to User List</a>
+{{ end }}

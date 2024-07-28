@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS payroll (
+    id SERIAL PRIMARY KEY,
+    employee_id BIGINT NOT NULL,
+    amount NUMERIC(10, 2) NOT NULL,
+    date TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    version INT NOT NULL DEFAULT 1,
+    CONSTRAINT fk_employee
+        FOREIGN KEY(employee_id) 
+	    REFERENCES users(id)
+);

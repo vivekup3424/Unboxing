@@ -1,0 +1,12 @@
+{{define "title"}}Admin Registration Success{{end}}
+{{ define "content" }}
+    <div class="success-message">
+        <p>Congratulations! You have successfully registered a new admin user.</p>
+        <p>Now please go and authenticate yourself to access the admin functions.</p>
+        <button>
+            <a href='tokens'>Authenticate</a>
+        <button>
+            <a href="/v1/user" class="btn">View Users</a>
+        </button>
+    </div>
+{{ end }}

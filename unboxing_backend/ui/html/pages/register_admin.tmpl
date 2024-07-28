@@ -1,0 +1,28 @@
+{{define "title"}}Register Admin{{end}}
+
+{{define "content"}}
+<article>
+    <h2>Register Admin</h2>
+    <form action="/admin/register" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="secret-key">Secret Key:</label>
+            <input type="text" id="secret-key" name="secret-key" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</article>
+{{end}}

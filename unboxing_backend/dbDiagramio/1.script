@@ -1,0 +1,64 @@
+Table users {
+    id int [pk, increment, not null] // SERIAL PRIMARY KEY
+    created_at timestamp [not null, default: `CURRENT_TIMESTAMP`] // TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+    name text [not null] // TEXT NOT NULL
+    email text [not null, unique] // TEXT NOT NULL UNIQUE
+    password_hash bytea [not null] // BYTEA NOT NULL
+    role text [not null] // TEXT NOT NULL CHECK (role IN ('Sales', 'Accountant', 'HR', 'Administrator'))
+    version int [not null, default: 1] // INT NOT NULL DEFAULT 1
+}
+
+Table customers {
+    id SERIAL [pk]
+    created_at timestamp [default: 'CURRENT_TIMESTAMP', not null]
+    name text [not null]
+    email text
+    phone text
+    address text
+    version int [default: 1, not null]
+}
+
+
+Table billing {
+    id INTEGER [pk, increment] // Unique integer ID for each billing entry
+    customer_id BIGINT [ref: > customers.id] // Foreign key to customers table
+    amount NUMERIC(10, 2) // Billing amount
+    date TIMESTAMP  [default: `CURRENT_TIMESTAMP`] // Billing date
+    version INTEGER [default: 1] // Version number for optimistic locking
+}
+
+Table payroll {
+    id INTEGER [pk, increment] // Unique integer ID for each payroll entry
+    employee_id BIGINT [ref: > users.id] // Foreign key to users table
+    amount NUMERIC(10, 2) // Payroll amount
+    date TIMESTAMP  [default: `CURRENT_TIMESTAMP`] // Payroll date
+    version INTEGER [default: 1] // Version number for optimistic locking
+}
+
+Table tokens {
+    hash BYTEA [pk] // Hashed version of the token, primary key
+    user_id BIGINT [ref: > users.id] // Foreign key to users table
+    expiry TIMESTAMP  // Expiry date of the token
+    scope TEXT // Scope or purpose of the token
+}
+
+Table roles {
+  id SERIAL [pk]
+  name TEXT [unique, not null]
+}
+
+Table permissions {
+  id SERIAL [pk]
+  name TEXT [unique, not null]
+}
+
+Table role_permissions {
+  role_id BIGINT [ref: > roles.id, not null]
+  permission_id BIGINT [ref : >permissions.id]
+}
+
+Table user_roles {
+  user_id BIGINT [ref: > users.id, not null]
+  role_id BIGINT [ref: > roles.id]
+}
+

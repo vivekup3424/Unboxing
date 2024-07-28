@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Customer</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar container">
+        <a href="customer_management.html" class="brand">Customer Management</a>
+        <ul class="nav-links">
+          <li><a href="dashboard.html">Back to Main Dashboard</a></li>
+          <li><a href="logout.html" id="logoutButton">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Update Customer</h1>
+      <section id="updateCustomerSection">
+        <form id="updateCustomerForm" class="customer-form">
+          <input type="hidden" id="updateCustomerId" name="customerId" />
+          <div class="form-group">
+            <label for="updateCustomerEmail">Email:</label>
+            <input
+              type="email"
+              id="updateCustomerEmail"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="updateCustomerPhone">Phone:</label>
+            <input type="tel" id="updateCustomerPhone" name="phone" />
+          </div>
+          <button type="submit" class="btn">Update Customer</button>
+          <button type="button" id="cancelUpdate" class="btn secondary">
+            Cancel
+          </button>
+          <div id="updateCustomerMessage" class="message"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Company Name. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/update_customer.js"></script>
+  </body>
+</html>

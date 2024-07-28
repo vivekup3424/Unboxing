@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show All Billings</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar container">
+        <a href="customer_management.html" class="brand"
+          >Customer & Billing Management</a
+        >
+        <ul class="nav-links">
+          <li><a href="dashboard.html">Back to Main Dashboard</a></li>
+          <li><a href="logout.html" id="logoutButton">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="container">
+      <h1>All Billings</h1>
+      <table id="billingsTable">
+        <thead>
+          <tr>
+            <th>Billing ID</th>
+            <th>Customer ID</th>
+            <th>Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Billing records will be inserted here -->
+        </tbody>
+      </table>
+      <div id="billingMessage" class="message"></div>
+    </main>
+    <script src="../assets/js/show_all_billings.js"></script>
+  </body>
+</html>

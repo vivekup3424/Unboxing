@@ -1,0 +1,24 @@
+{{ define "content" }}
+<h2>Edit User</h2>
+<form action="/admin/user/{{ .User.ID }}/edit" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ .User.Name }}" required>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ .User.Email }}" required>
+    </div>
+    <div>
+        <label for="role">Role:</label>
+        <select id="role" name="role">
+            <option value="Administrator" {{ if eq .User.Role "Administrator" }}selected{{ end }}>Administrator</option>
+            <option value="Sales" {{ if eq .User.Role "Sales" }}selected{{ end }}>Sales</option>
+            <option value="Accountant" {{ if eq .User.Role "Accountant" }}selected{{ end }}>Accountant</option>
+            <option value="HR" {{ if eq .User.Role "HR" }}selected{{ end }}>HR</option>
+        </select>
+    </div>
+    <button type="submit">Update User</button>
+</form>
+<a href="/v1/users" class="btn">Back to User List</a>
+{{ end }}

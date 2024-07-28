@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Admin | Company Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a href="index.html" class="brand">Company Dashboard</a>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="register">
+        <div class="container">
+          <h1>Register as Admin</h1>
+          <form id="registerForm">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="form-group">
+              <label for="secret-key">Secret Key:</label>
+              <input type="text" id="secret-key" name="secret-key" required />
+            </div>
+            <button type="submit" class="btn">Register</button>
+          </form>
+          <div id="message" class="message"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Company Dashboard. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

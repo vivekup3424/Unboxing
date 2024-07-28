@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update User</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar container">
+        <a href="user_management.html" class="brand">Admin Dashboard</a>
+        <ul class="nav-links">
+          <li><a href="dashboard.html">Back to Main Dashboard</a></li>
+          <li><a href="logout.html" id="logoutButton">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Update User</h1>
+      <section id="updateUserSection">
+        <form id="updateUserForm" class="user-form">
+          <input type="hidden" id="updateUserId" name="userId" />
+          <div class="form-group">
+            <label for="updateEmail">Email:</label>
+            <input type="email" id="updateEmail" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="updatePassword">Password:</label>
+            <input type="password" id="updatePassword" name="password" />
+          </div>
+          <div class="form-group">
+            <label for="updateRole">Role:</label>
+            <select id="updateRole" name="role" required>
+              <option value="Administrator">Administrator</option>
+              <option value="HR">HR</option>
+              <option value="Sales">Sales</option>
+              <option value="Accountant">Accountant</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Update User</button>
+          <button type="button" id="cancelUpdate" class="btn secondary">
+            Cancel
+          </button>
+          <div id="updateUserMessage" class="message"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Company Name. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/update_user.js"></script>
+  </body>
+</html>

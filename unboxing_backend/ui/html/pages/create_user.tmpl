@@ -1,0 +1,28 @@
+{{ define "content" }}
+<h2>Create New User</h2>
+<form action="/admin/user/create" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+        <label for="role">Role:</label>
+        <select id="role" name="role">
+            <option value="Administrator">Administrator</option>
+            <option value="Sales">Sales</option>
+            <option value="Accountant">Accountant</option>
+            <option value="HR">HR</option>
+        </select>
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Create User</button>
+</form>
+<a href="/v1/users" class="btn">Back to User List</a>
+{{ end }}

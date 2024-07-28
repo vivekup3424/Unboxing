@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS billing (
+    id SERIAL PRIMARY KEY,
+    customer_id BIGINT NOT NULL,
+    amount NUMERIC(10, 2) NOT NULL,
+    date TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    version INT NOT NULL DEFAULT 1,
+    CONSTRAINT fk_customer
+        FOREIGN KEY(customer_id) 
+	    REFERENCES customers(id)
+);

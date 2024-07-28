@@ -1,0 +1,7 @@
+
+# Ignore Go cache
+*.go-build/
+
+# Ignore all binaries
+*.bin
+/bin/

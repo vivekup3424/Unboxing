@@ -1,0 +1,32 @@
+{{ define "content" }}
+<h2>User List</h2>
+<a href="/v1/user/create" class="btn">Add New User</a>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range .Users }}
+        <tr>
+            <td>{{ .Name }}</td>
+            <td>{{ .Email }}</td>
+            <td>{{ .Role }}</td>
+            <td>
+                <a href="/admin/user/{{ .ID }}" class="btn">View</a>
+                <a href="/admin/user/{{ .ID }}/edit" class="btn">Edit</a>
+                <a href="/admin/user/{{ .ID }}/delete" class="btn" onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
+            </td>
+        </tr>
+        {{ else }}
+        <tr>
+            <td colspan="4">No users found.</td>
+        </tr>
+        {{ end }}
+    </tbody>
+</table>
+{{ end }}

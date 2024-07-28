@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Billing</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar container">
+        <a href="customer_management.html" class="brand"
+          >Customer & Billing Management</a
+        >
+        <ul class="nav-links">
+          <li><a href="dashboard.html">Back to Main Dashboard</a></li>
+          <li><a href="logout.html" id="logoutButton">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="container">
+      <h1>Add Billing</h1>
+      <form id="addBillingForm" class="billing-form">
+        <div class="form-group">
+          <label for="customerID">Customer ID:</label>
+          <input type="number" id="customerID" name="customer_id" required />
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" name="amount" step="0.01" required />
+        </div>
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+        <button type="submit" class="btn">Add Billing</button>
+        <div id="addBillingMessage" class="message"></div>
+      </form>
+    </main>
+    <script src="../assets/js/add_billings.js"></script>
+  </body>
+</html>

@@ -19,6 +19,8 @@ https://github.com/user-attachments/assets/740361c4-3639-4d9c-9a38-18106eae4a0b
 
 ## Architecture
 
+![diagram](https://github.com/user-attachments/assets/9b2ced64-16b6-4b7e-a79b-638e3ad7ac2f)
+
 - **Backend**: Go (Golang) for server-side application logic.
 - **Frontend**: HTML, CSS, and JavaScript for the user interface.
 - **Database**: PostgreSQL for data storage.
@@ -41,7 +43,11 @@ https://github.com/user-attachments/assets/740361c4-3639-4d9c-9a38-18106eae4a0b
 - **CSS**
 - **JavaScript**
 - **PostgreSQL**
-
+  
+## Lines of Code
+- Backend Golang Application with Migrations
+  ![lines](https://github.com/user-attachments/assets/d5ea60a6-1edf-42ed-b3cd-d82aa4cd9880)
+- 
 ---
 
 This description should give a clear and concise overview of your application.

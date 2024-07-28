@@ -2,7 +2,8 @@
 
 This is a demo application for managing a company's operations using a web-based interface. The application is built using Go for the backend and HTML, CSS, and JavaScript for the frontend. It supports functionalities for user management, customer management, billing, payroll, and role-based access control with different permissions.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=Vrau6EMr8eo)
+[![YouTube Video](https://img.youtube.com/vi/Vrau6EMr8eo/0.jpg)](https://www.youtube.com/watch?v=Vrau6EMr8eo)
+
 ## Features
 
 - **Role-Based Access Control (RBAC)**: Implements roles such as Administrator, HR, Sales, and Accountant, each with specific permissions. This ensures that users have access only to the parts of the application they are authorized to manage.
